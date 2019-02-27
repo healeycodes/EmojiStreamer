@@ -1,7 +1,24 @@
-import websockets
-import asyncio
+import collections
 import json
+import asyncio
+import websockets
 import praw
+
+
+class BoundedSet():
+    def __init__(self, size):
+        self.size = size
+        self.store = set()
+        self.fifo = collections.deque()
+
+    def add(self, item):
+        self.store.add(item)
+        self.fifo.appendleft(item)
+        if len(self.fifo) > self.size:
+            self.store.remove(self.fifo.pop())
+
+    def has(self, item):
+        return item in self.store
 
 
 class EmojiStreamer():
@@ -17,6 +34,8 @@ class EmojiStreamer():
 
     async def register(self, websocket):
         self.clients.add(websocket)
+        if len(self.clients) == 1:
+            await self.scan_emojis()
 
     async def unregister(self, websocket):
         self.clients.remove(websocket)
@@ -30,19 +49,25 @@ class EmojiStreamer():
         await self.scan_emojis()
 
     async def scan_emojis(self):
-        recent_emojis = list()
-        for comment in self.reddit.subreddit('all').stream.comments(pause_after=-1): #TODO: emojis might be sent more than once, use dblqueue?
-            if comment is None:
-                if len(recent_emojis) > 1:
-                    return await self.send_emojis(''.join(recent_emojis))
-                await self.scan_emojis()
-            for char in comment.body:
-                if char in self.emojis:
-                    recent_emojis.append(char)
+        seen = BoundedSet(100)  # praw api can be unreliable
+        while True:
+            for comment in self.reddit.subreddit('all').stream.comments():
+                if seen.has(comment.id):
+                    continue
+                else:
+                    seen.add(comment.id)
+
+                emojis = list()
+                for char in comment.body:
+                    if char in self.emojis:
+                        emojis.append(char)
+                if emojis:
+                    await self.send_emojis(''.join(emojis))
+                if len(self.clients) == 0:
+                    return
 
     async def main(self, websocket, path):
         await self.register(websocket)
-        await self.scan_emojis()
 
 
 with open('emojis/emoji.json', encoding='utf8') as emoji_db:
