@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
     <div id="status">Not connected ❌</div>
     <h3 class="title">Since you loaded this page, the following emoji have been posted to Reddit..</h3>
+    <div class="explainer">
+        <a href="#">How does it work? +</a>
+        <p class="hidden">
+            Every comment posted to Reddit is scanned for emojis using PRAW (The Python Reddit API Wrapper).
+            <br>
+            The 'scanner' is a Python child process of a Node.js app. Should an emoji be found, it's piped to the Node.js app.
+            <br>
+            From there, emojis are sent to every connected WebSocket client (a.k.a. you!) 👍
+        </p>
+    </div>
     <div id="emoji-con"></div>
     <script src="js/index.js"></script>
 </body>
+
 </html>

@@ -10,6 +10,18 @@
     padding-top: 4px;
 }
 
+.explainer {
+    font-family: 'Inconsolata', monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+.explainer p {
+    line-height: 150%;
+}
+
 #emoji-con {
     display: flex;
     flex-direction: row;

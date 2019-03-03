@@ -21,3 +21,13 @@ ws.onmessage = (emojis) => {
         render(emoji);
     });
 }
+
+const explainer = document.querySelectorAll('.explainer');
+explainer.forEach(exp => {
+    exp.querySelectorAll('a').forEach(link => {
+        link.onclick = () => {
+            const text = exp.querySelector('p');
+            text.classList.contains('hidden') ? text.classList.remove('hidden') : text.classList.add('hidden');
+        }
+    });
+});
