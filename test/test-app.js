@@ -31,7 +31,7 @@ describe('Emoji-streaming WebSocket is functional', () => {
         it('streams emojis', (done) => {
             let msgCount = 0;
             ws.on('message', (data) => {
-                if (++msgCount === 5) {
+                if (++msgCount === 3) {
                     server.close()
                     done();
                 }

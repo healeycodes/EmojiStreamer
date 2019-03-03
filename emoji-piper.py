@@ -15,7 +15,7 @@ client_id = os.environ['CLIENTID']
 client_secret = os.environ['CLIENTSECRET']
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
-                     user_agent='emoji-tracker v0')
+                     user_agent='emoji-tracker v0.1')
 
 while True:
     try:
