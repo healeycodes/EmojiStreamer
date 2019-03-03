@@ -15,17 +15,18 @@
     "ws": "^6.1.4"
   },
   "scripts": {
+    "start": "node app.js",
     "test": "mocha test/test-app.js --exit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/healeycodes/emoji-tracker.git"
+    "url": "git+https://github.com/healeycodes/EmojiStreamer.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/healeycodes/emoji-tracker/issues"
+    "url": "https://github.com/healeycodes/EmojiStreamer/issues"
   },
-  "homepage": "https://github.com/healeycodes/emoji-tracker#readme"
+  "homepage": "https://github.com/healeycodes/EmojiStreamer#readme"
 }
