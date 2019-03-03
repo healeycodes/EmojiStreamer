@@ -2,7 +2,7 @@
 
 ## EmojiStreamer
 
-Real-time streaming of any emojis within comments posted to Reddit!
+Real-time streaming of any emojis within comments posted to Reddit! A neat one-page app.
 
 
 ![EmojiStreamer](https://github.com/healeycodes/EmojiStreamer/blob/master/preview.gif)
