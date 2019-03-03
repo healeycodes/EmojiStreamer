@@ -2,7 +2,7 @@
 
 ## EmojiStreamer
 
-Real-time streaming of any emojis within comments posted to Reddit!
+Real-time streaming of any emojis within comments posted to Reddit! A neat one-page app.
 
 
 ![EmojiStreamer](https://github.com/healeycodes/EmojiStreamer/blob/master/preview.gif)
@@ -43,4 +43,4 @@ Set your Reddit API keys to enviroment values `CLIENTID` and `CLIENTSECRET`.
 
 `npm start`
 
-The project is then hosted on `localhost`, the port is `PORT` or 8080.
+The page is then hosted on `localhost`, the port is `PORT` or 8080.
