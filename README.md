@@ -21,7 +21,7 @@ From there, emojis are sent to every connected WebSocket client (a.k.a. you!) ðŸ
 
 ### Travis CI / Testing
 
-Test builds are ran for every commit to master at the moment.
+Test builds are ran for every commit to `master` at the moment.
 
 This project uses integration testing to ensure that the connection to Reddit is functional.
 
