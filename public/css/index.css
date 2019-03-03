@@ -5,8 +5,9 @@
     top: 0;
 }
 
-h3 {
+.title {
     font-family: 'Inconsolata', monospace;
+    padding-top: 4px;
 }
 
 #emoji-con {
