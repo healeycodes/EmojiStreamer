@@ -1,0 +1,31 @@
+{
+  "name": "emoji-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "ws": "^6.1.4"
+  },
+  "scripts": {
+    "test": "mocha test/test-app.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healeycodes/emoji-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/healeycodes/emoji-tracker/issues"
+  },
+  "homepage": "https://github.com/healeycodes/emoji-tracker#readme"
+}

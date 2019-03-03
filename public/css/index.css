@@ -1,0 +1,17 @@
+#status {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+h3 {
+    font-family: 'Inconsolata', monospace;
+}
+
+#emoji-con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+}

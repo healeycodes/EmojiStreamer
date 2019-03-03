@@ -1,5 +1,5 @@
 ''' @healeycodes
-emoji-piper.py - pipe emoji to stdout live from Reddit comments
+EmojiStreamer - pipe emoji to stdout live from Reddit comments
 '''
 import os
 import sys
