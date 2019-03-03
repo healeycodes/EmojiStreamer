@@ -1,5 +1,5 @@
 /** [at]healeycodes
- * EmojiStreamer - we consume our express/express-ws here. See appFactory.js and emoji-streamer.py
+ * EmojiStreamer - we consume our express/express-ws app here. See appFactory.js and emoji-streamer.py
  */
 const { spawn } = require('child_process');
 const emojiPiper = spawn('python', ['./emoji-piper.py'])
