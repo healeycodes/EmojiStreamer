@@ -23,7 +23,7 @@ From there, emojis are sent to every connected WebSocket client (a.k.a. you!) ðŸ
 
 Test builds are ran for every commit to `master` at the moment.
 
-This project uses integration testing to ensure that the connection to Reddit is functional.
+Integration tests are used to ensure that the connection to Reddit is functional.
 
 The process is the same as the install stage but swap `npm start` for `npm test`.
 
