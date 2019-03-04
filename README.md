@@ -25,7 +25,7 @@ Test builds are ran for every commit to `master` at the moment.
 
 Integration tests are used to ensure that the connection to Reddit is functional.
 
-The process is the same as the install stage but swap `npm start` for `npm test`.
+The setup steps are the same as the install stage but swap `npm start` for `npm test`.
 
 See `.travis.yml` for more information.
 
