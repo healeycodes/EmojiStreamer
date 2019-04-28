@@ -1,4 +1,4 @@
-const EMOJI_STREAM = `ws://${window.location.host}/stream`;
+const EMOJI_STREAM = `wss://${window.location.host}/stream`;
 const ws = new WebSocket(EMOJI_STREAM);
 
 const status = document.querySelector('#status');

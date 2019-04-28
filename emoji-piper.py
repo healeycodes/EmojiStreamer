@@ -5,7 +5,6 @@ import os
 import sys
 import json
 import praw
-sys.stdout.reconfigure(encoding='utf-8')
 
 with open('emojis/emoji.json', encoding='utf8') as emoji_db:
     cleaned = filter(lambda e: 'emoji' in e, json.load(emoji_db))

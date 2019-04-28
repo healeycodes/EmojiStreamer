@@ -15,6 +15,7 @@
     "ws": "^6.1.4"
   },
   "scripts": {
+    "preinstall": "pip3 install -r requirements1.txt",
     "start": "node app.js",
     "test": "mocha test/test-app.js --exit"
   },
