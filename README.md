@@ -35,7 +35,7 @@ See `.travis.yml` for more information.
 
 Tested with `Python 3.7` and `Node v10` but earlier versions 'should' work - we don't use any bleeding edge features.
 
-Set your Reddit API keys to enviroment values `CLIENTID` and `CLIENTSECRET`. Set your python to `PY` (e.g. 'python', 'python3').
+Set your Reddit API keys to enviroment values `CLIENTID` and `CLIENTSECRET`. Set your python alias to `PY` (e.g. 'python', 'python3').
 
 `pip install -r requirements1.txt` (named differently to allow deploying to Glitch)
 
