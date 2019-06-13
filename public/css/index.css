@@ -1,31 +1,32 @@
 #status {
-    font-family: 'Inconsolata', monospace;
-    position: absolute;
-    right: 0;
-    top: 0;
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .title {
-    font-family: 'Inconsolata', monospace;
-    padding-top: 4px;
+  font-family: 'Inconsolata', monospace;
+  padding-top: 4px;
 }
 
 .explainer {
-    font-family: 'Inconsolata', monospace;
-    margin-bottom: 10px;
+  font-family: 'Inconsolata', monospace;
+  margin-bottom: 10px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .explainer p {
-    line-height: 150%;
+  line-height: 150%;
+  margin-bottom: 20px;
 }
 
 #emoji-con {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
 }

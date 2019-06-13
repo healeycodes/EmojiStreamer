@@ -15,12 +15,13 @@
 </head>
 
 <body>
+    <a class="github-button" href="https://github.com/healeycodes" data-size="large" aria-label="Follow @healeycodes on GitHub">Follow @healeycodes</a>
     <a class="github-button" href="https://github.com/healeycodes/EmojiStreamer" data-icon="octicon-star" data-size="large" aria-label="Star healeycodes/EmojiStreamer on GitHub">Star</a>
     <div id="status">Not connected ❌</div>
     <h3 class="title">Since you loaded this page, the following emoji have been posted to Reddit..</h3>
     <div class="explainer">
-        <a href="#">How does it work? +</a>
-        <p class="hidden">
+        <a class="toggler" href="#">How does it work? +</a>
+        <p class="toggleable hidden">
             Every comment posted to Reddit is scanned for emojis using PRAW (The Python Reddit API Wrapper).
             <br>
             The 'scanner' is a Python child process of a Node.js app. Should an emoji be found, it's piped to the Node.js app.
