@@ -15,19 +15,26 @@ ws.onopen = () => {
 
 ws.onmessage = (emojis) => {
     // Multiple emoji may arrive delimited by a new-line char
-    emojiList = emojis.data.split('\n');
+    let emojiList = emojis.data.split('\n');
     emojiList.splice(emojiList.length - 1);
     emojiList.forEach(emoji => {
         render(emoji);
     });
 }
 
-const explainer = document.querySelectorAll('.explainer');
-explainer.forEach(exp => {
-    exp.querySelectorAll('a').forEach(link => {
-        link.onclick = () => {
-            const text = exp.querySelector('p');
-            text.classList.contains('hidden') ? text.classList.remove('hidden') : text.classList.add('hidden');
-        }
-    });
-});
+// Set up explainer toggle
+let explainer = false;
+const toggleable = document.querySelector('.toggleable'); // Cache everything because we like to go fast
+const toggler = document.querySelector('.toggler');
+const togglerText = toggler.innerText.slice(0, toggler.innerText.length-1);
+document.querySelector('.explainer').onclick = () => {
+    explainer = !explainer;
+    toggler.innerText = togglerText + explainer === true ? '-' : '+';
+    if (explainer === true) {
+        toggleable.classList.remove('hidden');
+        toggler.innerText = togglerText + '-';
+    } else {
+        toggleable.classList.add('hidden');
+        toggler.innerText = togglerText + '+';
+    }
+  }

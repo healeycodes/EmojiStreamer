@@ -3,8 +3,9 @@
  */
 const WebSocket = require('ws');
 const { spawn } = require('child_process');
-const emojiPiper = spawn('python', [`${__dirname}/../emoji-piper.py`])
-const app = require('../appFactory')(emojiPiper);
+const python = process.env.PY;
+const emojiPiper = spawn(python, [`${__dirname}/../emoji-piper.py`])
+const app = require('../app')(emojiPiper);
 
 describe('App starts', () => {
     it('launches without error ', (done) => {
@@ -20,7 +21,7 @@ describe('Emoji-streaming WebSocket is functional', () => {
     const PORT = process.env.TESTPORT || 8080;
     
     const server = app.listen(PORT, () => {
-        const ws = new WebSocket('ws://localhost:8080/stream');
+        const ws = new WebSocket(`ws://localhost:${PORT}/stream`);
 
         it('accepts connections', (done) => {
             ws.on('open', () => {
