@@ -44,3 +44,9 @@ Set your Reddit API keys to enviroment values `CLIENTID` and `CLIENTSECRET`. Set
 `npm start`
 
 The page is then hosted on `localhost`, the port is `PORT` or `8080`.
+
+<br>
+
+### License
+
+MIT.
