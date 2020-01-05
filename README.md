@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/healeycodes/EmojiStreamer.svg?branch=master)](https://travis-ci.org/healeycodes/EmojiStreamer)
 
-## EmojiStreamer ~ https://emoji-streamer.glitch.me
+## EmojiStreamer
 
 Real-time streaming of any emojis within comments posted to Reddit! A neat one-page app.
 
