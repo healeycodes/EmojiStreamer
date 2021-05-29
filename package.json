@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "mocha": "^6.0.2",
-    "ws": "^6.1.4"
+    "ws": "^7.4.6"
   },
   "scripts": {
     "preinstall": "pip3 install -r requirements1.txt",
